@@ -1,0 +1,214 @@
+/* Global reset et normalisation */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, body {
+    min-width: 940px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 100%;
+    line-height: 1em;
+    color: #858585;
+    background: #000;
+}
+
+/* Clear floats */
+.clear {
+    clear: both;
+}
+
+/* Liens */
+a {
+    color: #e1e1e1;
+    text-decoration: none;
+}
+a:hover {
+    text-decoration: underline;
+}
+
+/* Header */
+header {
+    height: 171px;
+    margin-bottom: -8px;
+}
+
+header .row-1 {
+    height: 112px;
+    width: 100%;
+    overflow: hidden;
+}
+
+header .row-1 .fleft {
+    font-size: 40px;
+    line-height: 1.2em;
+    padding: 26px 0 0 47px;
+}
+
+header .row-1 ul {
+    padding: 49px 60px 0 0;
+    float: right;
+}
+
+header .row-1 ul li {
+    float: left;
+    padding-left: 54px;
+}
+
+header .row-2 {
+    height: 51px;
+}
+
+header .row-2 ul {
+    width: 100%;
+    overflow: hidden;
+}
+
+header .row-2 ul li {
+    float: left;
+    font-size: 20px;
+    line-height: 2.4em;
+    margin-right: 5px;
+    background-color: #000;
+}
+
+header .row-2 ul li.last {
+    margin-right: 0;
+}
+
+header .row-2 ul li a {
+    text-decoration: none;
+    color: #f0f0f0;
+    width: 184px;
+    height: 56px;
+    float: left;
+    background-image: url('../images/nav-bg.gif');
+    background-repeat: no-repeat;
+    background-position: 0 0;
+    text-align: center;
+}
+
+header .row-2 ul li a:hover, header .row-2 ul li a.active {
+    color: #d72a18;
+    background-image: url('../images/nav-act.gif');
+}
+
+/* Conteneur principal pour centrer le carrousel */
+#content {
+    width: 940px;
+    margin: 0 auto;
+}
+
+#slogan {
+    width: 940px;
+    height: 322px;
+    position: relative;
+    background: url('../images/banner-bg.gif') no-repeat left top;
+    color: #1d1d1d;
+}
+
+/* Section avec les images du carrousel */
+#slogan .image-gallery-container {
+    width: 80%;  /* La largeur de la fenêtre de défilement */
+    height: 350px;  /* Hauteur du carrousel */
+    margin: 0 auto;  /* Centrer horizontalement */
+    overflow: hidden;  /* Masquer les images qui débordent de la fenêtre */
+    position: relative;  /* Pour centrer l'animation */
+    background-color: #430C05;  /* Fond sombre pour la zone de défilement */
+}
+
+/* Liste des images (elles se déplacent horizontalement) */
+#slogan .image-gallery {
+    display: flex;
+    width: 300%;  /* La largeur totale des images, 100% par image */
+    animation: scroll-images 50s linear infinite;  /* Animation fluide et continue */
+}
+
+/* Les images */
+#slogan .image-gallery img {
+    width: 20%;  /* Chaque image prend 20% de la largeur (5 images) */
+    height: 100%;  /* Chaque image prend toute la hauteur de la fenêtre */
+    object-fit: cover;  /* L'image est redimensionnée sans déformation */
+}
+
+/* Animation pour faire défiler les images une à une */
+@keyframes scroll-images {
+    0% {
+        transform: translateX(-20);  /* Commence au début */
+    }
+    20% {
+        transform: translateX(-120%);  /* Première image complètement passée */
+    }
+    40% {
+        transform: translateX(-220%);  /* Deuxième image complètement passée */
+    }
+    60% {
+        transform: translateX(-320%);  /* Troisième image complètement passée */
+    }
+    80% {
+        transform: translateX(-420%);  /* Quatrième image complètement passée */
+    }
+    100% {
+        transform: translateX(-520%);  /* Cinquième image complètement passée */
+    }
+}
+
+/* Mise en forme pour les images et autres sections */
+#content .box {
+    margin: 0;
+    background: #000;
+    width: 100%;
+}
+
+#content .box .border-left {
+    background: url('../images/border-left.gif') repeat-y left top;
+}
+
+#content .box .border-right {
+    background: url('../images/border-right.gif') repeat-y right top;
+}
+
+#content .box .inner {
+    padding: 28px 50px 25px 50px;
+}
+
+/* Footer */
+footer {
+    background: url('../images/footer-tail.gif') repeat-x left top #bfbfbf;
+    color: #1d1d1d;
+    font-size: 0.86em;
+    line-height: 1.667em;
+    text-align: center;
+}
+
+footer .footerlink {
+    padding: 35px 25px;
+}
+
+footer .footerlink p {
+    margin: 0;
+    padding: 0;
+    color: #1d1d1d;
+}
+
+footer .footerlink a {
+    color: #1d1d1d;
+    font-weight: normal;
+    text-decoration: underline;
+}
+
+footer .footerlink a:hover {
+    color: #1d1d1d;
+    text-decoration: none;
+}
+
+footer .left {
+    background: url('../images/footer-left.gif') no-repeat left top;
+}
+
+footer .right {
+    height: 89px;
+    background: url('../images/footer-right.gif') no-repeat right top;
+    text-align: center;
+}
